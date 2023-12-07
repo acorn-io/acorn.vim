@@ -1,0 +1,91 @@
+*vim-acorn.txt* acorn development plugin
+*vim-acorn*
+
+CONTENTS                                                             *acorn-contents*
+
+  1. Intro........................................|acorn-intro|
+  2. Install......................................|acorn-install|
+  3. Commands.....................................|acorn-commands|
+  4. Mappings.....................................|acorn-mappings|
+  6. Functions....................................|acorn-functions|
+  7. Settings.....................................|acorn-settings|
+  8. Troubleshooting..............................|acorn-troubleshooting|
+  9. Credits......................................|acorn-credits|
+
+==============================================================================
+INTRO                                                                   *acorn-intro*
+
+==============================================================================
+INSTALL                                                               *acorn-install*
+
+==============================================================================
+COMMANDS                                                             *acorn-commands*
+
+                                                                          *:acornFmt*
+:acornFmt
+
+Filter the current acorn buffer through `acorn fmt`.  It tries to
+preserve cursor position and avoids replacing the buffer with stderr
+output.
+
+==============================================================================
+MAPPINGS                                                            *acorn-mappings*
+
+==============================================================================
+FUNCTIONS                                                           *acorn-functions*
+
+                                                                     *acorn#Format()*
+
+Filter the current acorn buffer through `acorn fmt`.  It tries to
+preserve cursor position and avoids replacing the buffer with stderr
+output.
+
+==============================================================================
+SETTINGS                                                            *acorn-settings*
+
+                                                             *'g:acorn_fmt_on_save'*
+
+Use this option to auto |:acornFmt| on save. By default it's enabled >
+
+  let g:acorn_fmt_on_save = 1
+<
+                                                                 *'g:acorn_command'*
+
+Use this option to define which tool is used to fotmat. By default `acorn` is
+used >
+
+  let g:acorn_command = "acorn"
+<
+                                                             *'g:acorn_fmt_command'*
+
+Use this option to define which <cmd> parameter is used with *g:acorn_command* tool.
+By default `fmt` is used >
+
+  let g:acorn_fmt_command = "fmt"
+<
+                                                             *'g:acorn_fmt_options'*
+
+Use this option to add additional options to the
+|'g:acorn_command'| + |'g:acorn_fmt_command'|. Default is empty. >
+
+  let g:acorn_fmt_options = ''
+<
+                                                       *'g:acorn_fmt_fail_silently'*
+
+Use this option to enable processing of
+|'g:acorn_command'| + |'g:acorn_fmt_command'| command if it fails. By default
+it is turned off. By default the error output from the
+|'g:acorn_command'| + |'g:acorn_fmt_command'| command is ignored.
+FixMe: The processing of the |'g:acorn_command'| + |'g:acorn_fmt_command'|
+is not implemented yet. So clearing this option would not do anything at this time. >
+
+  let g:acorn_fmt_fail_silently = 1
+<
+
+==============================================================================
+TROUBLESHOOTING                                              *acorn-troubleshooting*
+
+==============================================================================
+CREDITS                                                             *acorn-credits*
+
+
